@@ -1,4 +1,4 @@
-from sqlalchemy import extract, func, select
+from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from typing import Optional, List
 
@@ -22,7 +22,6 @@ class CRUDCharityProject(CRUDBase):
         project_id = project_id.scalars().first()
         return project_id
 
-
     async def get_projects_by_completion_rate(
         self,
         session: AsyncSession
@@ -32,7 +31,6 @@ class CRUDCharityProject(CRUDBase):
             select(CharityProject).where(CharityProject.fully_invested.is_(True))
         )
         charity_projects = charity_projects.scalars().all()
-        
         for charity_project in charity_projects:
             create_date = charity_project.create_date
             close_date = charity_project.close_date
