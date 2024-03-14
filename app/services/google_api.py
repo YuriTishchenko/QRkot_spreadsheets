@@ -5,6 +5,7 @@ from app.core.config import settings
 
 FORMAT = "%Y/%m/%d %H:%M:%S"
 
+
 async def spreadsheets_create(wrapper_services: Aiogoogle) -> str:
     now_date_time = datetime.now().strftime(FORMAT)
     service = await wrapper_services.discover('sheets', 'v4')
@@ -23,6 +24,7 @@ async def spreadsheets_create(wrapper_services: Aiogoogle) -> str:
     spreadsheetid = response['spreadsheetId']
     return spreadsheetid
 
+
 async def set_user_permissions(
         spreadsheetid: str,
         wrapper_services: Aiogoogle
@@ -37,7 +39,8 @@ async def set_user_permissions(
             json=permissions_body,
             fields="id"
         ))
-    
+
+
 async def spreadsheets_update_value(
         spreadsheetid: str,
         charity_projects: list,
@@ -51,8 +54,6 @@ async def spreadsheets_update_value(
         ['Название проекта', 'Время сбора', 'Описание']
     ]
     for charity_project in charity_projects:
-        print(1111111111111111)
-        print(charity_project)
         new_row = [
             str(charity_project.name),
             str(charity_project.days_to_complete),
