@@ -9,7 +9,7 @@
 - Активируйте виртуальное окружение: source venv/bin/activate
 - установите зависимости: pip install -r requirements.txt
 - Создайте в и заполните корневой директории файл .env
-  ´´´
+´´´
 APP_TITLE=Сервис бронирования переговорных комнат
 DATABASE_URL=sqlite+aiosqlite:///./<название базы данных>.db
 SECRET=секретное слово>
@@ -26,7 +26,7 @@ AUTH_URI=https://accounts.google.com/o/oauth2/auth
 TOKEN_URI=https://oauth2.googleapis.com/token
 AUTH_PROVIDER_X509_CERT_URL=https://www.googleapis.com/oauth2/v1/certs
 CLIENT_X509_CERT_URL=<ссылка>
-  ´´´
+```
 ## Создание и применение миграций
 - alembic revision --autogenerate -m "The name of the migration" 
 - alembic upgrade head 
