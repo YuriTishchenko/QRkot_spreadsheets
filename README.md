@@ -9,7 +9,7 @@
 - Активируйте виртуальное окружение: source venv/bin/activate
 - установите зависимости: pip install -r requirements.txt
 - Создайте в и заполните корневой директории файл .env
-´´´
+```
 APP_TITLE=Сервис бронирования переговорных комнат
 DATABASE_URL=sqlite+aiosqlite:///./<название базы данных>.db
 SECRET=секретное слово>
