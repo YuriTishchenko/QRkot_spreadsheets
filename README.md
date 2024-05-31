@@ -4,7 +4,7 @@
 ### Google Sheets для QRKot
 Приложение QRKot может формировать отчёт в гугл-таблице. В таблице присутсвуют закрытые проекты, отсортированные по скорости сбора средств: от тех, что закрылись быстрее всего, до тех, что долго собирали нужную сумму.
 ## Установка
-- Склонируйте репозиторий: git clone git@github.com:AbbadonAA/cat_charity_fund.git
+- Склонируйте репозиторий: git clone git@github.com:YuriTishchenko/QRkot_spreadsheets.git
 - Создайте venv: python3 -m venv venv
 - Активируйте виртуальное окружение: source venv/bin/activate
 - установите зависимости: pip install -r requirements.txt
